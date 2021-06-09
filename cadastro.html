@@ -16,17 +16,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div>
     <header>
-        <h1>
-            Peneira de Futebol 2021
-        </h1>
+        <h1>Peneira de Futebol 2021</h1>
         <img src="imagens/banner-semfundo.png" alt="Banner do site" id="banner">        
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="peneira.html">Peneiras</a>
-            <a href="cadastro.html" class="active">Cadastro</a>
-        </nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="peneira.html">Peneiras</a></li>
+            <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        </ul>
     </header>
     <section class="conteudo">
         <p class="obrigatorio">(*) Campos obrigatórios.</p>
@@ -34,21 +32,21 @@
    
     <form action="/action_page.php" method="GET" >
         <fieldset class="formulario">
-            <legend>Cadastro do Candidato</legend>
-            <label class="lblForm" for="nome">Nome completo:<span class="obrigatorio">*</span></label>
+            <legend class="titForm">Cadastro do Candidato</legend>
+            <label class="lblForm" for="nome">Nome completo:<span>*</span></label>
             <input class="caixaPreencher" type="text" nome="nome" placeholder="Digite seu nome" required style="width: 300px;"><br><br>
-            <label class="lblForm" for="dtNasc">Data de nascimento:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="dtNasc">Data de nascimento:<span>*</label>
             <input class="caixaPreencher" type="date" name="dtNasc" id="stNasc" required><br><br>
-            <label class="lblForm" for="rg">RG:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="rg">RG:<span>*</label>
             <input class="caixaPreencher" type="text" name="filed-name" id="rg" required placeholder="Ex: 999999999" onkeypress="$(this).mask('00.000.000-W', {translation: {'W':{pattern:/[X0-9]/}}, reverse:true})">
-            <label class="lblForm" for="cpf">CPF:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="cpf">CPF:<span>*</label>
             <input class="caixaPreencher" type="text" name="cpf" id="cpf" required placeholder="Ex: 99999999999" onkeypress="$(this).mask('000.000.000-02')"><br><br>
-            <legend  class="lblForm">Sexo:<span class="obrigatorio">*</legend>
+            <legend  class="lblForm">Sexo:<span>*</legend>
             <input class="caixaPreencher" type="radio" name="genero" id="masculino" value="M" required>
             <label class="lblForm" for="masculino">Masculino</label>
             <input class="caixaPreencher" type="radio" name="genero" id="feminino" value="F" required>
             <label class="lblForm" for="feminino">Feminino</label><br><br>
-            <label class="lblForm" for="modalidade">Modalidade:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="modalidade">Modalidade:<span>*</label>
             <select class="caixaPreencher" name="modalidade" id="modalidade" required="true">
                 <option value="n/a"></option>
                 <option value="preMirim">Pré-Mirim</option>
@@ -59,48 +57,44 @@
             </select><br><br>
             <label class="lblForm" for="telefone">Telefone:</label>
             <input class="caixaPreencher" type="tel" name="telefone" id="telefone" placeholder="Opcional" onkeypress="$(this).mask('(00) 0000-00009')" >
-            <label class="lblForm" for="celular">Celular:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="celular">Celular:<span>*</label>
             <input class="caixaPreencher" type="tel" name="celular" id="celular" placeholder="(99) 99999-9999" onkeypress="$(this).mask('(00) 0000-00009')" required><br><br>
-            <label class="lblForm" for="email">E-mail:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="email">E-mail:<span>*</label>
             <input class="caixaPreencher" type="email" name="emal" id="email" placeholder="peniera@peneira.com" required>
-            <label class="lblForm" for="endereco">Endereço:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="endereco">Endereço:<span>*</label>
             <input class="caixaPreencher" type="text" name="endereco" id="endereco" placeholder="Ex: Rua Abençoado, 666" required><br><br>
-            <label  class="lblForm" for="docs">Anexar documentos:<span class="obrigatorio">* </label>
+            <label  class="lblForm" for="docs">Anexar documentos:<span>* </label>
             <input type="file" name="docs" id="docs" required><br><br>
             <label for="chekDocs">Documentos anexados do candidato:</label><br>
             <input type="checkbox" name="docRG" id="DocRG">RG<br>
             <input type="checkbox" name="docCPF" id="docCPF">CPF<br>
             <input type="checkbox" name="docEnd" id="DocEnd">Comprovante de Endereço<br>
-            <input type="checkbox" name="docCert" id="DocCert">Certidão de nascimento<br>
-            <label for="texto">Deixe uma mesagem:</label><br>
+            <input type="checkbox" name="docCert" id="DocCert">Certidão de nascimento<br><br>
+            <label for="texto">Deixe uma mesagem:</label><br><br>
             <textarea class="caixaPreencher" name="msg" id="msg" style="width:300px; height:100px;" placeholder="Escreva aqui."></textarea>
 
         </fieldset>
         <fieldset class="formulario">
-            <legend>Responsável legal</legend>
-            <label class="lblForm" for="nomeR">Nome completo:<span class="obrigatorio">*</label>
+            <legend class="titForm">Responsável legal</legend>
+            <label class="lblForm" for="nomeR">Nome completo:<span>*</label>
             <input class="caixaPreencher" type="text" nome="nomeR" placeholder="Digite seu nome" required ><br><br>
-            <label class="lblForm" for="rgR">RG:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="rgR">RG:<span>*</label>
             <input class="caixaPreencher" type="text" name="filed-name" id="rgR" required placeholder="Ex: 999999999" onkeypress="$(this).mask('00.000.000-W', {translation: {'W':{pattern:/[X0-9]/}}, reverse:true})">
-            <label class="lblForm" for="cpfR">CPF:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="cpfR">CPF:<span>*</label>
             <input class="caixaPreencher" type="text" name="cpfR" id="cpfR" required placeholder="Ex: 99999999999" onkeypress="$(this).mask('000.000.000-02')"><br><br>
-            <label class="lblForm" for="celularR">Celular:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="celularR">Celular:<span>*</label>
             <input class="caixaPreencher" type="tel" name="celularR" id="celularR" placeholder="(99) 99999-9999" onkeypress="$(this).mask('(00) 0000-00009')" required>
-            <label class="lblForm" for="emailR">E-mail:<span class="obrigatorio">*</label>
+            <label class="lblForm" for="emailR">E-mail:<span>*</label>
             <input class="caixaPreencher" type="email" name="emalR" id="emailR" placeholder="peniera@peneira.com" required><br><br>
             <label for="obsR">Observações:</label><br>
-            <textarea class="caixaPreencher" name="msgR" id="msgR" style="width:300px; height:100px;" placeholder="Escreva aqui."></textarea>
-
+            <textarea class="caixaPreencher" name="msgR" id="msgR" style="width:300px; height:100px;" placeholder="Escreva aqui."></textarea><br>
+            <input id="btnEnviar" type="submit" formaction="/action_page2.php" value="Enviar">
         </fieldset>
-        <input id="btnEnviar" type="submit" formaction="/action_page2.php" value="Enviar">
     </form>
    
 
  <!--Rodapé-->
  <footer class="rodape">
-    <figure>
-    <img src="imagens/image13.png" alt="Imagem rodapé" class="imgrodape">
-    </figure>
     <section class="contatorodape">
         <h3>Contato</h3>
         <p>(11) 4567-2345 | (11) 98888-7777</p>
@@ -117,5 +111,7 @@
         <p>Das 08:00 às 17:00</p>
     </section>
     <p>Copyright &copy; 2021. Wellington Rodrigues de Jesus | RGM: 26701901</p>
-</footer></body>
+    </footer>
+    </div>
+</body>
 </html>

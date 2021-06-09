@@ -1,89 +1,93 @@
-/*cabeçalho*/
+/*Página*/
+body{
+
+    border-style: solid;
+    margin-left: 15%;
+    margin-right: 15%;
+    z-index: 1;
+    background-image: url(imagens/image11.png);
+    background-repeat: inherit;
+    margin-top: 0%;
+    margin-bottom: 0px;
+
+}
+div{
+
+    margin-top: -3%;
+    background-color: rgba(198, 198, 198, 1);
+    margin-bottom: -1.75%;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+/*Banner*/
+
 header > h1{
 
-font-family: Arial, Helvetica, sans-serif;
-font-size: 30px;
-text-align: left;
-position: fixed;
-z-index: 1000;
-padding: 0px;
-background-color: white;
-top: -20px;
-left: 25%;
-right: 20.2%;
-padding: 23.2px;
-background-color: rgb(198, 198, 198);
+    font-size: 200%;
+    font-style: italic;
+    position: fixed;
+    height: 10%;
+    width: 69.55%;
+    margin-left: 0%;
+    /*margin-right: 15%;*/
+    background-color: rgba(198, 198, 198, 1);
+    margin-top: -9px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    z-index: 100;
 
 }
 #banner{
 
     position: fixed;
-    width: 80px;    
-    z-index: 1000;
-    top: 0px;
-    background-color: white;
-    background-color:rgba(198, 198, 198);
+    margin-left: 0.2%;
+    height: 10%;
+    z-index: 100;
+    margin-top: 1%;
+
     
 }
 
 /*Menu*/
 
-nav{
-    z-index: 100;
-    position: fixed;
-    top: 20px;
-    z-index: 90;
+ul {
     list-style-type: none;
-    margin-top: 60px;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 12%;
+    width: 69.55%;
+    z-index: 101;
 }
-
-a{
+  
+li {
     float: left;
 }
-
-nav a{
-
+  
+li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 8px 108.5px;
+    padding: 10px 131.34px;
     text-decoration: none;
-
+    font-weight: 500;
 }
-
-nav  a:hover:not(.active){
-    background-color: #111;
-    color: #04aa6d;
-    font-weight: 900;
-}
-.active{
-    background: #04aa6d;
+  
+li a:hover:not(.active) {
+    background-color: rgba(58,190,211, 0.7);
+    font-weight: 500;
     color: #111;
-    font-weight: 900;
+
 }
-
-body{
-
-    margin-top: -20px;
-    position: relative;
-    border: solid;
-    border-top: transparent;
-    z-index: 2000;
-}
-
-/*página inteira*/
-
-body{
-
-    top: 0px;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgba(198, 198, 198,0.5);
-    margin-left: 20%;
-    margin-right: 20%;
-    
+  
+.active {
+    background-color: rgba(58,190,211, 0.7);
+    font-weight: 500;
+    color: white;
 }
 
 /*Conteúdo*/
@@ -93,8 +97,6 @@ body{
     position: relative;
     top: 120px;
     z-index: 30;
-
-
 }
 
 .para-secao{
@@ -111,9 +113,11 @@ body{
 section > h2{
 
     text-align: center;
-    color: rgb(4,170,109);
-    top: auto;
+    color: rgb(24, 124, 155);
     margin-bottom: -20px;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    font-size: 160%;
    
 }
 
@@ -123,24 +127,24 @@ section > h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
-    height: 300px;
+    width: 70%;
+    height: 30%;
     z-index: 9;
 }
 
 /*Rodaé*/
 
-.imgrodape{
+/*.imgrodape{
 
     height: 144.3px;
     position: relative;
     /*margin-top: 80px;*/
-    bottom: -160px;
+    /*bottom: -160px;
     margin-left: -40px;
     z-index: 8;
     opacity: 0.5;
 
-}
+}*/
 .contatorodape{
 
     display: inline-block;
@@ -148,16 +152,18 @@ section > h2{
     position: relative;
     z-index: 10;
     margin-left: 50px;
-    /*top: -159px;*/
+    top: 150px;
+    margin-bottom: 170px;
     color: #111;
     font-weight: 900;
+    left: 60px;
 }
 
 footer > p{
 
     text-align: right;
     position: relative;
-    bottom: -10px;
+    bottom: 10px;
     right: 20px;
     /*top: -164px;*/
     z-index: 10;
@@ -168,18 +174,29 @@ footer > p{
 .obrigatorio{
     color: red;
     position: relative;
+    top: 15px;
+    margin-left: 12%;
 }
 form{
 
     position: relative;
-    top: 110px;
+    top: 120px;
     text-align: justify;
+    
+}
+
+fieldset{
+
+    border-radius: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
 }
 
 .caixaPreencher:hover, #docs:hover{
 
     border-radius: 6px;
-    border-color:rgba(4, 170, 109, 1);
+    border-color:rgba(58,190,211, 1);
     border-style: solid;
     background-color: rgb(188, 255, 244);
 
@@ -206,9 +223,9 @@ form{
     padding: 8px 8px;
     border-style: solid;
     border-radius: 10px;
-    margin-left: 30%;
+    margin-left: 5%;
     margin-top: 10px;
-    border-color:rgb(129, 129, 129);
+    border-color:rgba(129, 129, 129,);
     color: rgba(4, 170, 109, 1);
     font-weight: 800;
     font-family: 'Times New Roman', Times, serif;
@@ -217,8 +234,22 @@ form{
 #btnEnviar:hover{
 
     border-radius: 10px;
-    border-color:rgba(4, 170, 109, 1);
+    border-color:rgba(58,190,211, 1);
     border-style: solid;
     background-color: rgb(188, 255, 244);
 
+}
+
+.titForm{
+
+    color:#111;
+    font-size: 160%;
+    text-align: center;
+    font-weight: 900;
+    font-style: inherit;
+
+}
+span{
+
+    color: red;
 }
